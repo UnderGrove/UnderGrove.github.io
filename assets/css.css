@@ -71,11 +71,6 @@ text-decoration: underline;
 color: cyan;
 }
 
-.editor-text-spaced {
-color: cyan; 
-margin-top: 50px;
-}
-
 .editor-header {
 color: cyan; 
 font-weight: bold; 
@@ -94,6 +89,14 @@ font-weight: bold;
 
 
 /* WALDHEIM */
+details[open] .dropdown-editor {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 45s steps(400, end) forwards;
+}
+
 details[open] .dropdown-load {
 -webkit-mask: linear-gradient(#000 0 0) no-repeat;
 mask: linear-gradient(#000 0 0) no-repeat;
