@@ -1,7 +1,6 @@
 body {
 background: #000;
 color: #fff;
-font-family: 'Courier New', monospace;
 padding: 30px;
 -ms-overflow-style: none; 
 }
@@ -43,6 +42,16 @@ color: dodgerblue;
 text-align: center;
 }
 
+img {
+width: 100%;
+max-width: 75%;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+
+/* these names suck, I gotta change em soon */
 .entry-heading {
 margin-bottom: 50px; 
 color: cyan; 
@@ -81,4 +90,30 @@ font-style: italic;
 .editor-bold {
 color: cyan; 
 font-weight: bold;
+}
+
+
+/* WALDHEIM */
+details[open] .dropdown-load {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 7s steps(27, end) forwards; 
+}
+
+details[open] .dropdown-load-licht {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 10s steps(7, end) forwards; 
+}
+
+details[open] .dropdown-load-edited {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 8s steps(16, end) forwards; 
 }
