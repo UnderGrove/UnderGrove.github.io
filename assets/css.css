@@ -1,0 +1,84 @@
+body {
+background: #000;
+color: #fff;
+font-family: 'Courier New', monospace;
+padding: 30px;
+-ms-overflow-style: none; 
+}
+
+body::-webkit-scrollbar, body::-webkit-scrollbar-button {
+display: none;
+}
+
+html {
+scrollbar-width: none; 
+}
+
+.box {
+max-width: 900px;
+margin: 0 auto;
+background: #16161D;
+padding: 20px;
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 45s steps(400, end) forwards;
+}
+
+@keyframes load {
+to {
+-webkit-mask-size: 100% 100%;
+mask-size: 100% 100%;
+}
+}
+
+a {
+color: cyan;
+text-align: center;
+}
+
+a:hover {
+color: dodgerblue;
+text-align: center;
+}
+
+.entry-heading {
+margin-bottom: 50px; 
+color: cyan; 
+text-align: center;
+}
+
+.editor-summary {
+color: cyan; 
+cursor: pointer; 
+font-weight: bold; 
+text-align: center; 
+margin-top: 50px; 
+text-decoration: underline;
+}
+
+.editor-text {
+color: cyan;
+}
+
+.editor-text-spaced {
+color: cyan; 
+margin-top: 50px;
+}
+
+.editor-header {
+color: cyan; 
+font-weight: bold; 
+text-decoration: underline;
+}
+
+.editor-italic {
+color: cyan; 
+font-style: italic;
+}
+
+.editor-bold {
+color: cyan; 
+font-weight: bold;
+}
