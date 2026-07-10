@@ -2,7 +2,10 @@ body {
 background: #000;
 color: #fff;
 padding: 30px;
--ms-overflow-style: none; 
+-ms-overflow-style: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 body::-webkit-scrollbar, body::-webkit-scrollbar-button {
@@ -24,7 +27,6 @@ mask: linear-gradient(#000 0 0) no-repeat;
 mask-size: 100% 0%;
 animation: load 45s steps(400, end) forwards;
 }
-
 @keyframes load {
 to {
 -webkit-mask-size: 100% 100%;
@@ -48,6 +50,8 @@ max-width: 75%;
 height: auto;
 display: block;
 margin: 0 auto;
+-webkit-user-drag: none;
+user-select: none; 
 }
 
 
@@ -119,4 +123,50 @@ mask: linear-gradient(#000 0 0) no-repeat;
 -webkit-mask-size: 100% 0%;
 mask-size: 100% 0%;
 animation: load 8s steps(16, end) forwards; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ANIMATION SKIP CONTROLLER --- */
+
+/* Hide the structural checkbox */
+.toggle-animation {
+  display: none;
+}
+
+/* Make the '#' character look clickable */
+.pause-hash {
+  cursor: none;
+  display: inline-block;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+
+/* Visual indicator: turn the '#' red once clicked to show animations are disabled */
+.toggle-animation:checked ~ .box .pause-hash {
+  color: red;
+}
+
+/* WHEN CHECKED: Kill all animations and reveal all content instantly */
+.toggle-animation:checked ~ .box,
+.toggle-animation:checked ~ .box details[open] .dropdown-editor,
+.toggle-animation:checked ~ .box details[open] .dropdown-load,
+.toggle-animation:checked ~ .box details[open] .dropdown-load-licht,
+.toggle-animation:checked ~ .box details[open] .dropdown-load-edited {
+  animation: none !important;
+  -webkit-mask-size: 100% 100% !important;
+  mask-size: 100% 100% !important;
 }
