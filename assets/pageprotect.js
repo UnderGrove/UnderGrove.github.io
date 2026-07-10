@@ -6,7 +6,7 @@ e.preventDefault();
 
 document.addEventListener('copy', function(e) {
 e.preventDefault();
-alert("This is the beginning to an end you will never see");
+alert("a beginning to an end none will see");
 });
 
 /* CTRL + S */
@@ -19,6 +19,6 @@ var isModifierPressed = e.ctrlKey || e.metaKey;
 
 if (isModifierPressed && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
 e.preventDefault();
-alert("There is a rabbit hole older then the rabbit & deeper then it could go");
+alert("a rabbit hole older then the rabbit that burrowed it");
 }
 });
