@@ -1,24 +1,33 @@
 /* P A G E - P R O T E C T E R */
-/* CTRL + C */
+
+/* Right-Click */
 document.addEventListener('contextmenu', function(e) {
 e.preventDefault();
 });
 
-document.addEventListener('copy', function(e) {
+/* F12 */
+document.addEventListener('keydown', function(e) {
+if (e.key === 'F12' || e.keyCode === 123) {
 e.preventDefault();
-alert("a beginning to an end none will see");
-});
+}
+
+
+var isModifierPressed = e.ctrlKey || e.metaKey;
+if (isModifierPressed) {
 
 /* CTRL + S */
-document.addEventListener('cut', function(e) {
+if (e.key === 's' || e.key === 'S' || e.keyCode === 83) {
 e.preventDefault();
-});
+}
 
-document.addEventListener('keydown', function(e) {
-var isModifierPressed = e.ctrlKey || e.metaKey;
-
-if (isModifierPressed && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+/* CTRL + U */
+if (e.key === 'u' || e.key === 'U' || e.keyCode === 85) {
 e.preventDefault();
-alert("a rabbit hole older then the rabbit that burrowed it");
+}
+
+/* CTRL + SHIFT + I */
+if (e.shiftKey && (e.key === 'i' || e.key === 'I' || e.keyCode === 73)) {
+e.preventDefault();
+}
 }
 });

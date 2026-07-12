@@ -1,0 +1,181 @@
+html {
+scrollbar-width: none; 
+}
+
+body {
+background: #000;
+color: #fff;
+padding: 30px;
+-ms-overflow-style: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+scrollbar-width: none; 
+}
+body::-webkit-scrollbar, body::-webkit-scrollbar-button {
+display: none;
+}
+
+.box {
+max-width: 900px;
+margin: 0 auto;
+background: #16161D;
+padding: 20px;
+border: 2px solid cyan;
+box-shadow:
+0 0 5px cyan,
+0 0 15px cyan,
+0 0 30px cyan,
+inset 0 0 10px cyan;
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 45s steps(400, end) forwards;
+}
+@keyframes load {
+to {
+-webkit-mask-size: 100% 100%;
+mask-size: 100% 100%;
+}
+}
+
+.box .footer {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #2a2a35;
+color: cyan;
+text-align: center;
+}
+
+
+a {
+color: cyan;
+text-align: center;
+}
+
+a:hover {
+color: dodgerblue;
+text-align: center;
+}
+
+img {
+width: 100%;
+max-width: 75%;
+height: auto;
+display: block;
+margin: 0 auto;
+-webkit-user-drag: none;
+user-select: none; 
+}
+
+
+/* these names suck, I gotta change em soon */
+.editor-header {
+color: cyan; 
+font-weight: bold; 
+text-decoration: underline;
+}
+
+.editor-mini-header {
+color: cyan; 
+font-weight: bold;
+font-style: italic;
+}
+
+.editor-summary {
+color: cyan; 
+cursor: pointer; 
+font-weight: bold; 
+text-align: center; 
+margin-top: 50px; 
+text-decoration: underline;
+}
+
+.editor-text {
+color: cyan;
+}
+
+.editor-context {
+color: cyan; 
+font-style: italic;
+}
+
+
+details[open] .dropdown-editor {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 45s steps(400, end) forwards;
+}
+
+details[open] .dropdown-load {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 7s steps(27, end) forwards; 
+}
+
+details[open] .dropdown-load-licht {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 10s steps(7, end) forwards; 
+}
+
+details[open] .dropdown-load-edited {
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 8s steps(16, end) forwards; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ANIMATION SKIP CONTROLLER --- */
+
+/* Hide the structural checkbox */
+.toggle-animation {
+  display: none;
+}
+
+/* Make the '#' character look clickable */
+.pause-hash {
+  cursor: none;
+  display: inline-block;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+
+/* Visual indicator: turn the '#' red once clicked to show animations are disabled */
+.toggle-animation:checked ~ .box .pause-hash {
+  color: red;
+}
+
+/* WHEN CHECKED: Kill all animations and reveal all content instantly */
+.toggle-animation:checked ~ .box,
+.toggle-animation:checked ~ .box details[open] .dropdown-editor,
+.toggle-animation:checked ~ .box details[open] .dropdown-load,
+.toggle-animation:checked ~ .box details[open] .dropdown-load-licht,
+.toggle-animation:checked ~ .box details[open] .dropdown-load-edited {
+  animation: none !important;
+  -webkit-mask-size: 100% 100% !important;
+  mask-size: 100% 100% !important;
+}

@@ -1,0 +1,70 @@
+html {
+scrollbar-width: none; 
+}
+body {
+background: #000;
+color: #fff;
+padding: 30px;
+-ms-overflow-style: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+scrollbar-width: none; 
+}
+body::-webkit-scrollbar, body::-webkit-scrollbar-button {
+display: none;
+}
+
+
+.box {
+max-width: 900px;
+margin: 0 auto;
+background: #16161D;
+padding: 20px;
+border: 3.5px solid cyan;
+box-shadow:
+0 0 5px cyan,
+0 0 15px cyan,
+0 0 30px cyan,
+inset 0 0 10px cyan;
+-webkit-mask: linear-gradient(#000 0 0) no-repeat;
+mask: linear-gradient(#000 0 0) no-repeat;
+-webkit-mask-size: 100% 0%;
+mask-size: 100% 0%;
+animation: load 3s steps(27, end) forwards;
+}
+@keyframes load {
+to {
+-webkit-mask-size: 100% 100%;
+mask-size: 100% 100%;
+}
+}
+
+.box .footer {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #2a2a35;
+color: cyan;
+text-align: center;
+}
+
+.header {
+font-size: 25px;
+color: cyan; 
+font-weight: bold; 
+text-decoration: underline;
+font-style: italic;
+}
+
+.text {
+color: cyan;
+}
+
+a {
+color: cyan;
+text-align: center;
+}
+a:hover {
+color: dodgerblue;
+text-align: center;
+}
