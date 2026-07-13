@@ -26,7 +26,7 @@ box-shadow:
 0 0 5px cyan,
 0 0 15px cyan,
 0 0 30px cyan,
-inset 0 0 10px cyan;
+inset 0 0 7px cyan;
 -webkit-mask: linear-gradient(#000 0 0) no-repeat;
 mask: linear-gradient(#000 0 0) no-repeat;
 -webkit-mask-size: 100% 0%;
@@ -44,6 +44,7 @@ mask-size: 100% 100%;
 margin-top: 20px;
 padding-top: 15px;
 border-top: 1px solid #2a2a35;
+font-size: 13px;
 color: cyan;
 text-align: center;
 }
